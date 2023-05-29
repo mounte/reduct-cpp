@@ -6,7 +6,7 @@ class DriftFrameworkConan(ConanFile):
     version = "1.3.0"
     license = "MIT"
     author = "Alexey Timin"
-    url = "https://github.com/reduct-storage/reduct-cpp"
+    url = "https://github.com/mounte/reduct-cpp"
     description = "Reduct Storage Client SDK for C++"
     topics = ("reduct-storage", "http-client", "http-api")
     settings = "os", "compiler", "build_type", "arch"
@@ -27,7 +27,7 @@ class DriftFrameworkConan(ConanFile):
             del self.options.fPIC
 
     def source(self):
-        self.run(f'git clone --branch v{self.version} https://github.com/reduct-storage/reduct-cpp.git')
+        self.run(f'git clone --branch v{self.version} https://github.com/mounte/reduct-cpp.git')
 
     def build(self):
         cmake = CMake(self)
