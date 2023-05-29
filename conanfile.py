@@ -31,6 +31,7 @@ class DriftFrameworkConan(ConanFile):
 
     def build(self):
         cmake = CMake(self)
+        cmake.definitions["CMAKE_BUILD_TYPE"] = "Release" # Force setting build type for tests...
         cmake.configure(source_dir='reduct-cpp')
         cmake.build()
 
